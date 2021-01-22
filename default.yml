@@ -1,0 +1,162 @@
+require:
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'bin/*'
+  TargetRubyVersion: 2.6
+  TargetRailsVersion: 6.0
+  NewCops: enable
+
+Rails:
+  Enabled: true
+
+Layout/AccessModifierIndentation:
+  EnforcedStyle: outdent
+  IndentationWidth: 2
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_first_argument
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+
+Layout/LineLength:
+  Max: 200
+  Exclude:
+    - 'db/migrate/*'
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+  IndentationWidth: 2
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/AbcSize:
+  Max: 65
+  Exclude:
+    - 'db/migrate/*'
+
+Metrics/BlockLength:
+  Max: 60
+  Exclude:
+    - 'config/routes.rb'
+    - 'lib/tasks/**/*'
+
+Metrics/ClassLength:
+  Max: 300
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/MethodLength:
+  Max: 60
+  Exclude:
+    - 'db/migrate/*'
+
+Metrics/ModuleLength:
+  Max: 300
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Minitest/TestMethodName:
+  Enabled: false
+
+Rails/BulkChangeTable:
+  Enabled: false
+
+Rails/CreateTableWithTimestamps:
+  Exclude:
+    - 'db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb'
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Rails/ReversibleMigration:
+  Exclude:
+    - 'db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb'
+
+Rails/SaveBang:
+  Enabled: false
+  # AllowedReceivers:
+  #   - 'mailchimp_list.members'
+
+Rails/SkipsModelValidations:
+  Enabled: false
+  Exclude:
+    - 'lib/tasks/**/*'
+    - 'db/migrate/*.rb'
+
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - staging
+    - production
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  AutoCorrect: true
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/GuardClause:
+  MinBodyLength: 3
+
+Style/HashEachMethods:
+  Enabled: true
+  AutoCorrect: true
+
+Style/HashTransformKeys:
+  Enabled: true
+  AutoCorrect: true
+
+Style/HashTransformValues:
+  Enabled: true
+  AutoCorrect: true
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/MultipleComparison:
+  Enabled: false
+
+Style/NestedTernaryOperator:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/SymbolArray:
+  MinSize: 7
