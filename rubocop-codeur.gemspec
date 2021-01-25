@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata['homepage_uri'] = spec.homepage
 
-  spec.files = Dir['lib/**/*', 'MIT-LICENSE', 'README.md']
+  spec.files = Dir['lib/**/*', 'MIT-LICENSE', 'README.md', 'default.yml']
 
   spec.required_ruby_version = '~> 2.6'
   spec.add_dependency 'rubocop', '~> 1.8', '>= 1.8.1'
