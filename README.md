@@ -1,31 +1,31 @@
-# Codeur Rubostyle
+# Rubocop Codeur
 Shared rubocop config gem for every Ruby projects at Codeur SARL
 
 ## Installation
 Add this lines to your application's Gemfile:
 ```ruby
 group :development do
-  gem 'codeur-rubostyle'
+  gem 'rubocop-codeur'
 end
 ```
 
 Or, for a Ruby library, add this to your gemspec:
 ```ruby
-spec.add_development_dependency 'codeur-rubostyle'
+spec.add_development_dependency 'rubocop-codeur'
 ```
 
 ## Usage
 Create a `.rubocop.yml` with the following directives:
 ```yml
 inherit_gem:
-  codeur-rubostyle:
+  rubocop-codeur:
     - default.yml
 ```
 
 Then run:
 `bundle exec rubocop`
 
-You do not need to include rubocop directly in your application's dependencies. Codeur-rubostyle will include `rubocop`, `rubocop-minitest`, `rubocop-performance` and `rubocop-rails` dependencies.
+You do not need to include rubocop directly in your application's dependencies. rubocop-codeur will include `rubocop`, `rubocop-minitest`, `rubocop-performance` and `rubocop-rails` dependencies.
 
 ## FYI
 It might be necessary to override style rules set in this gem for some projects or to add specific ones. Rule inheritance provided by Rubocop works like the following:
@@ -34,7 +34,7 @@ It might be necessary to override style rules set in this gem for some projects 
 For example:
 ```yml
 inherit_gem:
-  codeur-rubostyle:
+  rubocop-codeur:
     - default.yml
 
 inherit_from: .some_rubocop_config_file.yml

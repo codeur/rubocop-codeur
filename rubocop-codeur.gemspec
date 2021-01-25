@@ -2,14 +2,14 @@
 
 lib = File.expand_path('../lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require_relative 'lib/codeur_rubostyle/version'
+require_relative 'lib/rubocop_codeur/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'codeur-rubostyle'
-  spec.version     = CodeurRubostyle::VERSION
+  spec.name        = 'rubocop-codeur'
+  spec.version     = RubocopCodeur::VERSION
   spec.authors     = ['Dev-team Codeur']
   spec.email       = ['dev@codeur.com']
-  spec.homepage    = 'https://github.com/codeur/codeur-rubostyle'
+  spec.homepage    = 'https://github.com/codeur/rubocop-codeur'
   spec.summary     = 'Codeur rubocop config gem'
   spec.description = 'Shared rubocop config gem for every Ruby projects at Codeur SARL'
   spec.license     = 'MIT'
