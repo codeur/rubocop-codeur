@@ -37,6 +37,7 @@ Layout/HashAlignment:
 
 Layout/LineLength:
   Max: 200
+  AutoCorrect: false
   Exclude:
     - 'db/migrate/*'
 

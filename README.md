@@ -14,6 +14,8 @@ Or, for a Ruby library, add this to your gemspec:
 spec.add_development_dependency 'rubocop-codeur'
 ```
 
+In order to authenticate to the Github Packages service, you will need to go through [this guide](https://docs.github.com/en/packages/guides/configuring-rubygems-for-use-with-github-packages)
+
 ## Usage
 Create a `.rubocop.yml` with the following directives:
 ```yml
@@ -25,9 +27,8 @@ inherit_gem:
 Then run:
 `bundle exec rubocop`
 
-You do not need to include rubocop directly in your application's dependencies. rubocop-codeur will include `rubocop`, `rubocop-minitest`, `rubocop-performance` and `rubocop-rails` dependencies.
+You don't  need to include rubocop directly in your application's dependencies. rubocop-codeur will include `rubocop`, `rubocop-minitest`, `rubocop-performance` and `rubocop-rails` dependencies.
 
-## FYI
 It might be necessary to override style rules set in this gem for some projects or to add specific ones. Rule inheritance provided by Rubocop works like the following:
 `inherit_gem → inherit_from → local rules`
 
@@ -45,3 +46,4 @@ AllCops:
 ```
 
 Note that this should be limited to very project-specify needs in order to keep consistency across repos. Feel free to clone, checkout, update `default.yml` and submit a pull request if you want to suggest style rules changes.
+
