@@ -44,7 +44,7 @@ AllCops:
     - path/to/exluded/file.rb
 ```
 
-Note that this should be limited to very project-specify needs in order to keep consistency across repos. Feel free to clone, checkout, update `default.yml` and submit a pull request if you want to suggest style rules changes.
+Note that those overriding will not be considered by codeclimate that imports directly the `.default.yml` config file, so it should be avoided as much as possible.
 
 ## Development
 To publish a new version of this gem, you'll need to build it with `gem build rubocop-codeur.gemspec` and then push it:
