@@ -46,3 +46,10 @@ AllCops:
 
 Note that this should be limited to very project-specify needs in order to keep consistency across repos. Feel free to clone, checkout, update `default.yml` and submit a pull request if you want to suggest style rules changes.
 
+## Development
+To publish a new version of this gem, you'll need to build it with `gem build rubocop-codeur.gemspec` and then push it:
+```
+gem push --key github \
+--host https://rubygems.pkg.github.com/codeur \
+rubocop-codeur-X.X.X.gem
+```
