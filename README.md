@@ -2,6 +2,8 @@
 Shared rubocop config gem for every Ruby projects at Codeur SARL
 
 ## Installation
+In order to authenticate to the Github Packages service, you will need to go through [this guide](https://docs.github.com/en/packages/guides/configuring-rubygems-for-use-with-github-packages)
+
 Add this lines to your application's Gemfile:
 ```ruby
 group :development do
@@ -13,9 +15,6 @@ Or, for a Ruby library, add this to your gemspec:
 ```ruby
 spec.add_development_dependency 'rubocop-codeur'
 ```
-
-In order to authenticate to the Github Packages service, you will need to go through [this guide](https://docs.github.com/en/packages/guides/configuring-rubygems-for-use-with-github-packages)
-
 ## Usage
 Create a `.rubocop.yml` with the following directives:
 ```yml
