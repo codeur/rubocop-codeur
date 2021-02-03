@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir['lib/**/*', 'MIT-LICENSE', 'README.md', 'default.yml']
 
   spec.required_ruby_version = '~> 2.6'
-  spec.add_dependency 'rubocop', '~> 1.8', '>= 1.8.1'
+  spec.add_dependency 'rubocop', '~> 1.9.1'
   spec.add_dependency 'rubocop-minitest', '~> 0.10', '>=0.10.2'
   spec.add_dependency 'rubocop-performance', '~> 1.9', '>= 1.9.2'
   spec.add_dependency 'rubocop-rails', '~> 2.9', '>= 2.9.1'
