@@ -85,6 +85,10 @@ Metrics/PerceivedComplexity:
 Minitest/TestMethodName:
   Enabled: false
 
+# Disabled because it doesn't with symbols like: record_001
+Naming/VariableNumber:
+  Enabled: false
+
 Rails/BulkChangeTable:
   Enabled: false
 
