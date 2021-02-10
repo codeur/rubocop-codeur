@@ -86,7 +86,13 @@ class Releaser
     Pathname.new(__dir__).dirname
   end
 
-  delegate :name, :version, to: :gemspec
+  def name
+    gemspec.name
+  end
+
+  def version
+    gemspec.version
+  end
 
   def version_tag
     "v#{version}"
