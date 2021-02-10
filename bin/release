@@ -136,10 +136,12 @@ class Releaser
   end
 
   def sh_with_status(cmd, &block)
-    outbuf = IO.popen(cmd, err: [:child, :out], &:read)
-    status = $CHILD_STATUS
-    yield(outbuf) if status.success? && block
-    [outbuf, status]
+    Dir.chdir(base) do
+      outbuf = IO.popen(cmd, err: [:child, :out], &:read)
+      status = $?
+      yield(outbuf) if status.success? && block
+      [outbuf, status]
+    end
   end
 
   def info(message)
