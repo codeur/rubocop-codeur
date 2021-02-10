@@ -105,8 +105,6 @@ Rails/ReversibleMigration:
 
 Rails/SaveBang:
   Enabled: false
-  # AllowedReceivers:
-  #   - 'mailchimp_list.members'
 
 Rails/SkipsModelValidations:
   Enabled: false

@@ -1,0 +1,152 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'fileutils'
+require 'shellwords'
+require 'pathname'
+require 'bundler'
+
+class Releaser
+  def run
+    build
+    tag
+    push_tag
+    push_gem
+  end
+
+  def build
+    info "Building gem #{gem_path}..."
+    FileUtils.rm_rf(gem_path)
+    FileUtils.mkdir_p(gem_path.dirname)
+    sh %W[gem build -o #{gem_path}]
+    success "#{name} #{version} built to pkg/#{gem_file_name}."
+  end
+
+  def tag
+    if already_tagged?
+      info "Tag #{version_tag} has already been created."
+      return
+    end
+
+    sh %W[git tag -m Version\ #{version} #{version_tag}]
+    success "Tagged #{version_tag}."
+  rescue RuntimeError
+    error "Untagging #{version_tag} due to error."
+    sh_with_status %W[git tag -d #{version_tag}]
+    raise
+  end
+
+  def push_tag
+    perform_git_push remote
+    perform_git_push "#{remote} --tags"
+    success 'Pushed git commits and tags.'
+  end
+
+  def push_gem
+    cmd = %W[gem push #{gem_path}]
+    cmd << '--key' << gem_key if gem_key
+    cmd << '--host' << allowed_push_host if allowed_push_host
+    unless allowed_push_host || Bundler.user_home.join('.gem/credentials').file?
+      raise "Your rubygems.org credentials aren't set. Run `gem push` to set them."
+    end
+
+    sh_with_input(cmd)
+    success "Pushed #{name} #{version} to #{gem_push_host}"
+  end
+
+  def remote
+    nil
+  end
+
+  def allowed_push_host
+    gemspec.metadata['allowed_push_host'] if gemspec.respond_to?(:metadata)
+  end
+
+  def gem_push_host
+    env_rubygems_host = ENV['RUBYGEMS_HOST']
+    env_rubygems_host = nil if
+      env_rubygems_host && env_rubygems_host.empty?
+
+    allowed_push_host || env_rubygems_host || 'rubygems.org'
+  end
+
+  def gem_key
+    Bundler.settings['gem.push_key']&.to_s&.downcase
+  end
+
+  def gem_file_name
+    "#{name}-#{version}.gem"
+  end
+
+  def gem_path
+    base.join('pkg', gem_file_name)
+  end
+
+  def base
+    Pathname.new(__dir__).dirname
+  end
+
+  delegate :name, :version, to: :gemspec
+
+  def version_tag
+    "v#{version}"
+  end
+
+  def gemspec
+    @gemspec ||= Gem::Specification.load(gemspec_path)
+  end
+
+  def gemspec_path
+    @gemspec_path ||= Dir.glob('*.gemspec').first
+  end
+
+  def already_tagged?
+    sh(%w[git tag]).split.include?(version_tag)
+  end
+
+  def perform_git_push(options = '')
+    Dir.chdir(base) do
+      cmd = "git push #{options}"
+      out, status = sh_with_status(cmd.shellsplit)
+      return if status.success?
+
+      raise "Couldn't git push. `#{cmd}' failed with the following output:\n\n#{out}\n"
+    end
+  end
+
+  def sh_with_input(cmd)
+    Dir.chdir(base) do
+      abort unless Kernel.system(*cmd)
+    end
+  end
+
+  def sh(cmd, &block)
+    out, status = sh_with_status(cmd, &block)
+    unless status.success?
+      cmd = cmd.shelljoin if cmd.respond_to?(:shelljoin)
+      raise(out.empty? ? "Running `#{cmd}` failed. Run this command directly for more detailed output." : out)
+    end
+    out
+  end
+
+  def sh_with_status(cmd, &block)
+    outbuf = IO.popen(cmd, err: [:child, :out], &:read)
+    status = $CHILD_STATUS
+    yield(outbuf) if status.success? && block
+    [outbuf, status]
+  end
+
+  def info(message)
+    puts "\033[33m#{message}\033[0m"
+  end
+
+  def success(message)
+    puts "\033[32m#{message}\033[0m"
+  end
+
+  def error(message)
+    puts "\033[31m#{message}\033[0m"
+  end
+end
+
+Releaser.new.run

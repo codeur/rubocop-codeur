@@ -60,8 +60,9 @@ Before all, configure your credentials for GitHub:
 
 If you have installed Ruby 2.7, you just have to run default command:
 ```
-rake release
+bin/release
 ```
+`rake release` is not working well for now...
 
 Else, to publish a new version of this gem, you'll need to build it with
 `gem build rubocop-codeur.gemspec` and then push it manually:
