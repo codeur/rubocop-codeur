@@ -2,8 +2,6 @@
 Shared rubocop config gem for every Ruby projects at Codeur SARL
 
 ## Installation
-In order to authenticate to the Github Packages service, you will need to go through [this guide](https://docs.github.com/en/packages/guides/configuring-rubygems-for-use-with-github-packages)
-
 Add this lines to your application's Gemfile:
 ```ruby
 group :development do
@@ -45,29 +43,25 @@ AllCops:
     - path/to/exluded/file.rb
 ```
 
-Note that those overriding will not be considered by codeclimate that imports
-directly the `.default.yml` config file, so it should be avoided as much as
-possible.
+Note that those overriding should be avoided as much as possible.
 
 ## Release
-Before all, configure your credentials for GitHub:
+Before all, configure your credentials for `dev-codeur` RubyGems account:
 
- 1. Create a token which have rights on packages (https://github.com/settings/tokens)
- 2. Add it to your config:
+ 1. Login to RubyGems with the `dev-codeur` account
+ 2. Create a token which have rights to push gems (https://rubygems.org/profile/api_keys)
+ 3. Add it to your config:
    ```
-   echo ":github: Bearer ${GH_TOKEN}" >> ~/.gem/credentials
+   echo ":rubygems_api_key: YOUR_API_KEY" >> ~/.gem/credentials
    ```
 
-If you have installed Ruby 2.7, you just have to run default command:
+You just have to run default command:
 ```
-bin/release
+rake release
 ```
-`rake release` is not working well for now...
 
 Else, to publish a new version of this gem, you'll need to build it with
 `gem build rubocop-codeur.gemspec` and then push it manually:
 ```
-gem push --key github \
---host https://rubygems.pkg.github.com/codeur \
-rubocop-codeur-X.X.X.gem
+gem push rubocop-codeur-X.X.X.gem
 ```

@@ -14,8 +14,6 @@ Gem::Specification.new do |spec|
   spec.description = 'Shared rubocop config gem for every Ruby projects at Codeur SARL'
   spec.license     = 'MIT'
 
-  spec.metadata['allowed_push_host'] = 'https://rubygems.pkg.github.com/codeur'
-
   spec.metadata['homepage_uri'] = spec.homepage
 
   spec.files = Dir['lib/**/*', 'MIT-LICENSE', 'README.md', 'default.yml']
