@@ -112,6 +112,10 @@ Rails/SkipsModelValidations:
     - 'lib/tasks/**/*'
     - 'db/migrate/*.rb'
 
+Rails/TimeZone:
+  Enabled: true
+  AutoCorrect: false
+
 Rails/UnknownEnv:
   Environments:
     - development
