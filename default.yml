@@ -169,3 +169,8 @@ Style/NumericPredicate:
 
 Style/SymbolArray:
   MinSize: 7
+
+Style/FormatStringToken:
+  Enabled: true
+  Exclude:
+    - 'config/routes.rb'
