@@ -66,9 +66,12 @@ Metrics/BlockLength:
   Exclude:
     - 'config/routes.rb'
     - 'lib/tasks/**/*'
+    - 'app/states/*'
 
 Metrics/ClassLength:
   Max: 300
+  Exclude:
+    - 'app/models/**/*'
 
 Metrics/CyclomaticComplexity:
   Max: 10
