@@ -46,9 +46,9 @@ AllCops:
 Note that those overriding should be avoided as much as possible.
 
 ## Release
-Before all, configure your credentials for `dev-codeur` RubyGems account:
+Before all, configure your credentials for RubyGems :
 
- 1. Login to RubyGems with the `dev-codeur` account
+ 1. Login to RubyGems
  2. Create a token which have rights to push gems (https://rubygems.org/profile/api_keys)
  3. Add it to your config:
    ```
