@@ -25,7 +25,7 @@ Then run:
 `bundle exec rubocop`
 
 You don't  need to include rubocop directly in your application's dependencies.
-`rubocop-codeur will include `rubocop`, `rubocop-minitest`, `rubocop-performance` and `rubocop-rails` dependencies.
+`rubocop-codeur` will include `rubocop`, `rubocop-minitest`, `rubocop-performance` and `rubocop-rails` dependencies.
 
 It might be necessary to override style rules set in this gem for some projects or to add specific ones. Rule inheritance provided by Rubocop works like the following:
 `inherit_gem → inherit_from → local rules`
@@ -46,9 +46,9 @@ AllCops:
 Note that those overriding should be avoided as much as possible.
 
 ## Release
-Before all, configure your credentials for `dev-codeur` RubyGems account:
+Before all, configure your credentials for RubyGems :
 
- 1. Login to RubyGems with the `dev-codeur` account
+ 1. Login to RubyGems
  2. Create a token which have rights to push gems (https://rubygems.org/profile/api_keys)
  3. Add it to your config:
    ```
@@ -65,3 +65,6 @@ Else, to publish a new version of this gem, you'll need to build it with
 ```
 gem push rubocop-codeur-X.X.X.gem
 ```
+
+## License
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). Copyright 2021 Codeur SARL.
