@@ -90,6 +90,9 @@ Metrics/PerceivedComplexity:
 Minitest/TestMethodName:
   Enabled: false
 
+Minitest/MultipleAssertions:
+  Max: 15
+
 # Disabled because it doesn't with symbols like: record_001
 Naming/VariableNumber:
   Enabled: false
