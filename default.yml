@@ -27,6 +27,10 @@ Layout/AccessModifierIndentation:
 Layout/ArgumentAlignment:
   EnforcedStyle: with_first_argument
 
+Lint/DuplicateMethods:
+  Exclude:
+    - 'db/migrate/*'
+
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
