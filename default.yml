@@ -95,7 +95,7 @@ Minitest/TestMethodName:
   Enabled: false
 
 Minitest/MultipleAssertions:
-  Max: 15
+  Max: 30
 
 # Disabled because it doesn't with symbols like: record_001
 Naming/VariableNumber:
