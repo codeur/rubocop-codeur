@@ -27,6 +27,73 @@ Layout/AccessModifierIndentation:
 Layout/ArgumentAlignment:
   EnforcedStyle: with_first_argument
 
+Layout/ClassStructure:
+  Enabled: true
+  AutoCorrect: false
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - attributes
+    - belongs_to
+    - has_many
+    - has_one
+    - accepts_nested_attributes_for
+    - has_attached_file
+    - public_delegate
+    - callbacks
+    - state_machine
+    - ransack_alias
+    - scope
+    - default_scope
+    - validations
+    - public_class_methods
+    - initializer
+    - public_methods
+    - protected_attribute_macros
+    - protected_methods
+    - private_attribute_macros
+    - private_delegate
+    - private_methods
+  Categories:
+    module_inclusion:
+      - include
+      - prepend
+      - extend
+    attributes:
+      - acts_as_voter
+      - attr_accessor
+      - attr_reader
+      - attr_writer
+      - attr_readonly
+      - devise
+      - emojify
+      - enum
+      - has_ancestry
+      - monetize
+      - pg_search_scope
+      - serialize
+      - has_secure_token
+    callbacks:
+      - before_validation
+      - after_validation
+      - before_save
+      - around_save
+      - before_create
+      - around_create
+      - before_update
+      - around_update
+      - before_destroy
+      - around_destroy
+      - after_destroy
+      - after_create
+      - after_save
+      - after_commit
+      - after_rollback
+    validations:
+      - validates_associated
+      - validates
+      - validate
+
 Lint/DuplicateMethods:
   Exclude:
     - 'db/migrate/*'
