@@ -1,0 +1,7 @@
+# require:
+#   - rubocop/cop/codeur_cops
+
+# Codeur/RailsAppPatterns:
+#   Description: 'Allows or forbids patterns in app directories'
+#   Enabled: true
+#   VersionAdded: '0.2.0'
