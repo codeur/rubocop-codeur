@@ -1,11 +1,15 @@
-require "test_helper"
+# frozen_string_literal: true
 
-class Rubocop::CodeurTest < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::Rubocop::Codeur::VERSION
-  end
+require 'test_helper'
 
-  def test_it_does_something_useful
-    assert false
+module Rubocop
+  class CodeurTest < Minitest::Test
+    def test_that_it_has_a_version_number
+      refute_nil ::Rubocop::Codeur::VERSION
+    end
+
+    def test_it_does_something_useful
+      assert false
+    end
   end
 end

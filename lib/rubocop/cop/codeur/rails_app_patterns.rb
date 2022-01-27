@@ -19,16 +19,16 @@ module RuboCop
       #   # good
       #   app/models/concerns/stuffy.rb
       #
-      # @example AllowedPatterns: [assets, channels, components, controllers, decorators, documents, helpers, inputs, javascript, jobs, mailers, models, serializers, services, views]
+      # @example AllowedPatterns: [assets, controllers, javascript, jobs, mailers, models, views]
       #   # bad
-      #   app/input/some_input.rb
+      #   app/controller/some_controller.rb
       #
       #   # good
-      #   app/inputs/some_input.rb
+      #   app/controllers/some_controller.rb
       #
       class RailsAppPatterns < Base
-        MSG_FORBIDDEN = 'The %<pattern>s are forbidden.'.freeze
-        MSG_NOT_ALLOWED = 'This %<pattern>s are not allowed. Allowed patterns are: %<allowed_patterns>s.'.freeze
+        MSG_FORBIDDEN = 'The %<pattern>s are forbidden.'
+        MSG_NOT_ALLOWED = 'This %<pattern>s are not allowed. Allowed patterns are: %<allowed_patterns>s.'
 
         def on_new_investigation
           file_path = processed_source.file_path
@@ -37,15 +37,15 @@ module RuboCop
           for_bad_patterns(file_path) { |msg| add_global_offense(msg, severity: :warning) }
         end
 
-      private
+        private
 
         def for_bad_patterns(file_path)
           pattern = pattern_from_path(file_path)
 
           if pattern_forbidden?(pattern)
-            msg = format(MSG_FORBIDDEN,              pattern: pattern)
+            msg = format(MSG_FORBIDDEN, pattern: pattern)
           elsif pattern_not_allowed?(pattern)
-            msg = format(MSG_NOT_ALLOWED,              pattern: pattern, allowed_patterns: allowed_patterns.join(', '))
+            msg = format(MSG_NOT_ALLOWED, pattern: pattern, allowed_patterns: allowed_patterns.join(', '))
           end
 
           yield msg if msg
@@ -70,8 +70,6 @@ module RuboCop
         def forbidden_patterns
           cop_config['ForbiddenPatterns'] || []
         end
-
-
       end
     end
   end

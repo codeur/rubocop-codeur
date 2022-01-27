@@ -1,6 +1,9 @@
-require "rubocop/codeur/version"
+# frozen_string_literal: true
+
+require 'rubocop/codeur/version'
 
 module RuboCop
+  # RuboCop Codeur project namespace
   module Codeur
     class Error < StandardError; end
     # Your code goes here...
@@ -11,4 +14,3 @@ module RuboCop
     private_constant(:CONFIG_DEFAULT, :PROJECT_ROOT)
   end
 end
-
