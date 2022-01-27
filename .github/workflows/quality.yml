@@ -1,0 +1,35 @@
+name: Quality audit
+
+on: [pull_request]
+
+jobs:
+  rubocop:
+    name: rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v1
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+      - name: Run Rubocop
+        uses: reviewdog/action-rubocop@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          rubocop_extensions: rubocop-codeur:gemfile
+          rubocop_version: gemfile
+          reporter: github-pr-check
+
+  brakeman:
+    name: brakeman
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v1
+      - name: Run Brakeman
+        uses: reviewdog/action-brakeman@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          brakeman_version: 5.0.4
+          reporter: github-pr-check

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rubocop/codeur/version'
+require 'yaml'
 
 module RuboCop
   # RuboCop Codeur project namespace
