@@ -41,6 +41,7 @@ module RuboCop
 
         def for_bad_patterns(file_path)
           pattern = pattern_from_path(file_path)
+          return if pattern.nil?
 
           if pattern_forbidden?(pattern)
             msg = format(MSG_FORBIDDEN, pattern: pattern)
@@ -52,7 +53,9 @@ module RuboCop
         end
 
         def pattern_from_path(path)
-          path.split('/app/').last.split('/').first
+          return nil unless path.match(%r{/app/(?<pattern>.+)/.+})
+
+          Regexp.last_match(:pattern)
         end
 
         def pattern_forbidden?(pattern)
@@ -60,7 +63,7 @@ module RuboCop
         end
 
         def pattern_not_allowed?(pattern)
-          allowed_patterns.any && allowed_patterns.exclude?(pattern)
+          allowed_patterns.any? && allowed_patterns.exclude?(pattern)
         end
 
         def allowed_patterns
