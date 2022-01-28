@@ -1,4 +1,4 @@
-# Rubocop Codeur
+# RuboCop Codeur
 Shared rubocop config gem for every Ruby projects at Codeur SARL
 
 ## Installation
@@ -25,9 +25,12 @@ Then run:
 `bundle exec rubocop`
 
 You don't  need to include rubocop directly in your application's dependencies.
-`rubocop-codeur` will include `rubocop`, `rubocop-minitest`, `rubocop-performance` and `rubocop-rails` dependencies.
+`rubocop-codeur` will include `rubocop`, `rubocop-github`, `rubocop-minitest`,
+`rubocop-performance` and `rubocop-rails` dependencies.
 
-It might be necessary to override style rules set in this gem for some projects or to add specific ones. Rule inheritance provided by Rubocop works like the following:
+It might be necessary to override style rules set in this gem for some projects
+or to add specific ones. Rule inheritance provided by RuboCop works like the
+following:
 `inherit_gem → inherit_from → local rules`
 
 For example:

@@ -1,0 +1,41 @@
+name: Test
+
+on: [pull_request]
+
+env:
+  RAILS_ENV: test
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby: ['2.7', '3.0']
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby ${{ matrix.ruby }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+
+      - name: Run tests
+        run: bin/rake test
+        env:
+          COVERAGE: true
+
+      - name: Simplecov Report
+        uses: aki77/simplecov-report-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          failedThreshold: 100
+
+      - name: Upload coverage
+        uses: actions/upload-artifact@v1
+        with:
+          name: Coverage
+          path: coverage

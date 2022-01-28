@@ -1,1 +1,9 @@
-inherit_from: default.yml
+AllCops:
+  NewCops: enable
+
+Naming/FileName:
+  Exclude:
+    - lib/rubocop-codeur.rb
+
+Gemspec/RequireMFA:
+  Enabled: false

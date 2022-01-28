@@ -1,7 +1,12 @@
 require:
+  - rubocop-codeur
   - rubocop-minitest
   - rubocop-performance
   - rubocop-rails
+
+inherit_gem:
+  rubocop-github:
+    - config/default.yml
 
 AllCops:
   Exclude:
@@ -20,6 +25,16 @@ AllCops:
 Rails:
   Enabled: true
 
+Codeur/RailsAppPatterns:
+  Enabled: true
+  ForbiddenPatterns:
+    - presenters
+    - view_objects
+    - modules
+
+Codeur/RailsAvoidInstanceMethodsInHelpers:
+  Enabled: true
+
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
   IndentationWidth: 2
@@ -31,18 +46,20 @@ Layout/ClassStructure:
   Enabled: true
   AutoCorrect: false
   ExpectedOrder:
+    - devise
     - module_inclusion
     - constants
     - attributes
+    - has_ancestry
     - belongs_to
     - has_many
     - has_one
-    - accepts_nested_attributes_for
-    - has_attached_file
+    - attachments
     - public_delegate
+    - class_macros
     - callbacks
     - state_machine
-    - ransack_alias
+    - aasm
     - scope
     - default_scope
     - validations
@@ -59,20 +76,31 @@ Layout/ClassStructure:
       - include
       - prepend
       - extend
+    attachments:
+      - has_one_attached
+      - has_many_attached
+      - has_attached_file
     attributes:
-      - acts_as_voter
       - attr_accessor
       - attr_reader
       - attr_writer
       - attr_readonly
-      - devise
       - emojify
       - enum
-      - has_ancestry
       - monetize
-      - pg_search_scope
       - serialize
       - has_secure_token
+      - alias_attribute
+      - slug
+    class_macros:
+      - acts_as_voter
+      - pg_search_scope
+      - counter_culture
+      - accepts_nested_attributes_for
+      - paginates_per
+      - ransack_alias
+      - ransacker
+      - ratyrate_rater
     callbacks:
       - before_validation
       - after_validation
@@ -93,10 +121,6 @@ Layout/ClassStructure:
       - validates_associated
       - validates
       - validate
-
-Lint/DuplicateMethods:
-  Exclude:
-    - 'db/migrate/*'
 
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
@@ -120,6 +144,13 @@ Layout/MultilineMethodCallIndentation:
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
   IndentationWidth: 2
+
+Lint/DuplicateMethods:
+  Exclude:
+    - 'db/migrate/*'
+
+Lint/MissingSuper:
+  Enabled: false
 
 Lint/RaiseException:
   Enabled: true
@@ -246,6 +277,9 @@ Style/NestedTernaryOperator:
 
 Style/NumericPredicate:
   Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
 
 Style/SymbolArray:
   MinSize: 7

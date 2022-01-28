@@ -1,0 +1,13 @@
+Codeur/RailsAppPatterns:
+  Description: 'Allows or forbids patterns in app directories'
+  Enabled: pending
+  VersionAdded: '0.2.0'
+  AllowedPatterns: []
+  ForbiddenPatterns: []
+
+Codeur/RailsAvoidInstanceMethodsInHelpers:
+  Description: 'Forbids instance methods in Rails helpers'
+  Enabled: pending
+  VersionAdded: '0.2.0'
+  Include:
+    - app/helpers/**/*.rb
