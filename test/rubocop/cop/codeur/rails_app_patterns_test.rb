@@ -9,10 +9,10 @@ module RuboCop
         def test_forbidden_patterns
           @cop.cop_config['ForbiddenPatterns'] = %w[weirds modules]
 
-          assert_offense(<<~RUBY, open_file('app/weirds/foo_weird.rb'))
+          assert_offense(<<~RUBY, open_file('app/weirds/foo_forbidden_weird.rb'))
             # frozen_string_literal: true
             ^{} `weirds` are forbidden.
-            module FooWeird
+            module FooForbiddenWeird
             end
           RUBY
 
@@ -27,17 +27,17 @@ module RuboCop
         def test_allowed_patterns
           @cop.cop_config['AllowedPatterns'] = %w[models controllers views]
 
-          assert_offense(<<~RUBY, open_file('app/weirds/foo_weird.rb'))
+          assert_offense(<<~RUBY, open_file('app/weirds/foo_not_allowed_weird.rb'))
             # frozen_string_literal: true
             ^{} `weirds` are not allowed. Allowed patterns are: `models`, `controllers`, `views`.
-            module FooWeird
+            module FooNotAllowedWeird
             end
           RUBY
 
-          assert_no_offenses(<<~RUBY, open_file('app/models/foo_bar.rb'))
+          assert_no_offenses(<<~RUBY, open_file('app/models/foo_baz.rb'))
             # frozen_string_literal: true
 
-            class FooBar
+            class FooBaz
             end
           RUBY
         end
