@@ -122,10 +122,6 @@ Layout/ClassStructure:
       - validates
       - validate
 
-Lint/DuplicateMethods:
-  Exclude:
-    - 'db/migrate/*'
-
 Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
@@ -148,6 +144,13 @@ Layout/MultilineMethodCallIndentation:
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
   IndentationWidth: 2
+
+Lint/DuplicateMethods:
+  Exclude:
+    - 'db/migrate/*'
+
+Lint/MissingSuper:
+  Enabled: false
 
 Lint/RaiseException:
   Enabled: true
