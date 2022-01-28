@@ -30,7 +30,6 @@ Codeur/RailsAppPatterns:
   ForbiddenPatterns:
     - presenters
     - view_objects
-    - uploaders
     - modules
 
 Codeur/RailsAvoidInstanceMethodsInHelpers:
