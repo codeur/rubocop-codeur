@@ -8,5 +8,5 @@ gemspec
 
 gem 'minitest', '~> 5.0'
 gem 'rake', '~> 12.0'
-gem 'rspec'
+gem 'rubocop-minitest', '~> 0.17'
 gem 'simplecov', require: false

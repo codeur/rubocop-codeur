@@ -46,7 +46,9 @@ module RuboCop
           if pattern_forbidden?(pattern)
             msg = format(MSG_FORBIDDEN, pattern: pattern)
           elsif pattern_not_allowed?(pattern)
-            msg = format(MSG_NOT_ALLOWED, pattern: pattern, allowed_patterns: allowed_patterns.join(', '))
+            msg = format(MSG_NOT_ALLOWED,
+                         pattern: pattern,
+                         allowed_patterns: allowed_patterns.map { |p| "`#{p}`" }.join(', '))
           end
 
           yield msg if msg
@@ -63,7 +65,7 @@ module RuboCop
         end
 
         def pattern_not_allowed?(pattern)
-          allowed_patterns.any? && allowed_patterns.exclude?(pattern)
+          allowed_patterns.any? && !allowed_patterns.include?(pattern)
         end
 
         def allowed_patterns
