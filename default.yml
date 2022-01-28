@@ -267,7 +267,6 @@ Style/ClassAndModuleChildren:
   AutoCorrect: true
 
 Style/ConditionalAssignment:
-  Enabled: true
   Enabled: false
 
 Style/Documentation:
@@ -284,6 +283,10 @@ Style/GuardClause:
 Style/HashEachMethods:
   Enabled: true
   AutoCorrect: true
+
+Style/HashSyntax:
+  Enabled: true
+  EnforcedStyle: ruby19
 
 Style/HashTransformKeys:
   Enabled: true
