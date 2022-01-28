@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
 
-  spec.add_dependency 'rubocop', '~> 1.9'
+  spec.add_dependency 'rubocop', '~> 1.25'
   spec.add_dependency 'rubocop-github', '~> 0.17'
   spec.add_dependency 'rubocop-minitest', '~> 0.10', '>=0.10.2'
   spec.add_dependency 'rubocop-performance', '~> 1.9', '>= 1.9.2'

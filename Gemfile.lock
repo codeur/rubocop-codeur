@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     rubocop-codeur (0.2.0)
-      rubocop (~> 1.9)
+      rubocop (~> 1.25)
       rubocop-github (~> 0.17)
       rubocop-minitest (~> 0.10, >= 0.10.2)
       rubocop-performance (~> 1.9, >= 1.9.2)

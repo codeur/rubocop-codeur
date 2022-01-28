@@ -3,7 +3,7 @@
 module RuboCop
   module Cop
     module Codeur
-      # This cop make sure that Rails app only uses patterns (app subdirectories)
+      # This cop makes sure that Rails app only uses patterns (app subdirectories)
       # defined in Cop config.
       #
       # @example ForbiddenPatterns: [presenters, view_objects, uploaders, modules]
@@ -27,8 +27,8 @@ module RuboCop
       #   app/controllers/some_controller.rb
       #
       class RailsAppPatterns < Base
-        MSG_FORBIDDEN = 'The %<pattern>s are forbidden.'
-        MSG_NOT_ALLOWED = 'This %<pattern>s are not allowed. Allowed patterns are: %<allowed_patterns>s.'
+        MSG_FORBIDDEN = '`%<pattern>s` are forbidden.'
+        MSG_NOT_ALLOWED = '`%<pattern>s` are not allowed. Allowed patterns are: %<allowed_patterns>s.'
 
         def on_new_investigation
           file_path = processed_source.file_path

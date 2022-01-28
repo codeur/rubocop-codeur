@@ -1,5 +1,5 @@
 require:
-  - rubocop/cop/codeur_cops
+  - rubocop-codeur
   - rubocop-minitest
   - rubocop-performance
   - rubocop-rails
@@ -26,11 +26,15 @@ Rails:
   Enabled: true
 
 Codeur/RailsAppPatterns:
+  Enabled: true
   ForbiddenPatterns:
     - presenters
     - view_objects
     - uploaders
     - modules
+
+Codeur/RailsAvoidInstanceMethodsInHelpers:
+  Enabled: true
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
