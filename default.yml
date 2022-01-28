@@ -36,10 +36,12 @@ Codeur/RailsAvoidInstanceMethodsInHelpers:
   Enabled: true
 
 Layout/AccessModifierIndentation:
+  Enabled: true
   EnforcedStyle: outdent
   IndentationWidth: 2
 
 Layout/ArgumentAlignment:
+  Enabled: true
   EnforcedStyle: with_first_argument
 
 Layout/ClassStructure:
@@ -51,6 +53,7 @@ Layout/ClassStructure:
     - constants
     - attributes
     - has_ancestry
+    - delegated_type
     - belongs_to
     - has_many
     - has_one
@@ -123,29 +126,36 @@ Layout/ClassStructure:
       - validate
 
 Layout/FirstArrayElementIndentation:
+  Enabled: true
   EnforcedStyle: consistent
 
 Layout/FirstHashElementIndentation:
+  Enabled: true
   EnforcedStyle: consistent
 
 Layout/HashAlignment:
+  Enabled: true
   EnforcedHashRocketStyle: table
   EnforcedColonStyle: table
 
 Layout/LineLength:
+  Enabled: true
   Max: 200
   AutoCorrect: false
   Exclude:
     - 'db/migrate/*'
 
 Layout/MultilineMethodCallIndentation:
+  Enabled: true
   EnforcedStyle: indented
 
 Layout/ParameterAlignment:
+  Enabled: true
   EnforcedStyle: with_fixed_indentation
   IndentationWidth: 2
 
 Lint/DuplicateMethods:
+  Enabled: true
   Exclude:
     - 'db/migrate/*'
 
@@ -159,11 +169,13 @@ Lint/StructNewOverride:
   Enabled: true
 
 Metrics/AbcSize:
+  Enabled: true
   Max: 65
   Exclude:
     - 'db/migrate/*'
 
 Metrics/BlockLength:
+  Enabled: true
   Max: 60
   Exclude:
     - 'config/routes.rb'
@@ -171,28 +183,34 @@ Metrics/BlockLength:
     - 'app/states/*'
 
 Metrics/ClassLength:
+  Enabled: true
   Max: 300
   Exclude:
     - 'app/models/**/*'
 
 Metrics/CyclomaticComplexity:
+  Enabled: true
   Max: 10
 
 Metrics/MethodLength:
+  Enabled: true
   Max: 60
   Exclude:
     - 'db/migrate/*'
 
 Metrics/ModuleLength:
+  Enabled: true
   Max: 300
 
 Metrics/PerceivedComplexity:
+  Enabled: true
   Max: 10
 
 Minitest/TestMethodName:
   Enabled: false
 
 Minitest/MultipleAssertions:
+  Enabled: true
   Max: 30
 
 # Disabled because it doesn't with symbols like: record_001
@@ -203,16 +221,20 @@ Rails/BulkChangeTable:
   Enabled: false
 
 Rails/CreateTableWithTimestamps:
+  Enabled: true
   Exclude:
     - 'db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb'
 
 Rails/EnvironmentVariableAccess:
+  Enabled: true
   AllowReads: true
 
 Rails/FilePath:
+  Enabled: true
   EnforcedStyle: arguments
 
 Rails/ReversibleMigration:
+  Enabled: true
   Exclude:
     - 'db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb'
 
@@ -230,6 +252,7 @@ Rails/TimeZone:
   AutoCorrect: false
 
 Rails/UnknownEnv:
+  Enabled: true
   Environments:
     - development
     - test
@@ -240,18 +263,22 @@ Style/AsciiComments:
   Enabled: false
 
 Style/ClassAndModuleChildren:
+  Enabled: true
   AutoCorrect: true
 
 Style/ConditionalAssignment:
+  Enabled: true
   Enabled: false
 
 Style/Documentation:
   Enabled: false
 
 Style/EmptyMethod:
+  Enabled: true
   EnforcedStyle: expanded
 
 Style/GuardClause:
+  Enabled: true
   MinBodyLength: 3
 
 Style/HashEachMethods:
@@ -279,9 +306,11 @@ Style/NumericPredicate:
   Enabled: false
 
 Style/StringLiterals:
+  Enabled: true
   EnforcedStyle: single_quotes
 
 Style/SymbolArray:
+  Enabled: true
   MinSize: 7
 
 Style/FormatStringToken:
