@@ -55,7 +55,7 @@ module RuboCop
         end
 
         def pattern_from_path(path)
-          return nil unless path.match(%r{/app/(?<pattern>.+)/.+})
+          return nil unless path.match(%r{/(?<folder>app|test)/(?<pattern>.+)/.+})
 
           Regexp.last_match(:pattern)
         end

@@ -24,6 +24,17 @@ module RuboCop
           RUBY
         end
 
+        def test_forbidden_patterns_in_test
+          @cop.cop_config['ForbiddenPatterns'] = %w[weirds modules]
+
+          assert_offense(<<~RUBY, open_file('test/weirds/foo_forbidden_weird_test.rb'))
+            # frozen_string_literal: true
+            ^{} `weirds` are forbidden.
+            module FooForbiddenWeird
+            end
+          RUBY
+        end
+
         def test_allowed_patterns
           @cop.cop_config['AllowedPatterns'] = %w[models controllers views]
 

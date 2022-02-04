@@ -48,6 +48,17 @@ AllCops:
 
 Note that those overriding should be avoided as much as possible.
 
+## Testing
+
+Run:
+```bash
+bin/rake test
+```
+or simply:
+```bash
+bin/rake
+```
+
 ## Release
 Before all, configure your credentials for RubyGems :
 
