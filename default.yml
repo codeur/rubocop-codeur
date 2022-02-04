@@ -4,10 +4,6 @@ require:
   - rubocop-performance
   - rubocop-rails
 
-inherit_gem:
-  rubocop-github:
-    - config/default.yml
-
 AllCops:
   Exclude:
     - 'db/schema.rb'
