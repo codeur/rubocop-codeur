@@ -29,7 +29,7 @@ Codeur/RailsAppPatterns:
     - modules
 
 Codeur/RailsAvoidInstanceMethodsInHelpers:
-  Enabled: true
+  Enabled: false
 
 Layout/AccessModifierIndentation:
   Enabled: true

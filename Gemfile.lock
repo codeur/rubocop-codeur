@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-codeur (0.4.0)
+    rubocop-codeur (0.4.1)
       rubocop (~> 1.25)
       rubocop-minitest (~> 0.10, >= 0.10.2)
       rubocop-performance (~> 1.9, >= 1.9.2)
@@ -10,7 +10,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.1)
+    activesupport (7.0.2.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -18,7 +18,7 @@ GEM
     ast (2.4.2)
     concurrent-ruby (1.1.9)
     docile (1.4.0)
-    i18n (1.9.1)
+    i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     minitest (5.15.0)
     parallel (1.21.0)
