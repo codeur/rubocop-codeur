@@ -15,7 +15,7 @@ AllCops:
     - 'test/dummy/db/schema.rb'
     - 'test/dummy/tmp/**/*'
   TargetRubyVersion: 2.7
-  TargetRailsVersion: 6.0
+  TargetRailsVersion: 7
   NewCops: enable
 
 Rails:
