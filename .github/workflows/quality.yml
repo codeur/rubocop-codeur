@@ -19,16 +19,3 @@ jobs:
           github_token: ${{ secrets.github_token }}
           rubocop_version: gemfile
           reporter: github-pr-check
-
-  brakeman:
-    name: brakeman
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v1
-      - name: Run Brakeman
-        uses: reviewdog/action-brakeman@v1
-        with:
-          github_token: ${{ secrets.github_token }}
-          brakeman_version: 5.0.4
-          reporter: github-pr-check
