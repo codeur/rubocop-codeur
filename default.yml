@@ -229,6 +229,9 @@ Rails/FilePath:
   Enabled: true
   EnforcedStyle: arguments
 
+Rails/I18nLocaleTexts:
+  Enabled: false
+
 Rails/ReversibleMigration:
   Enabled: true
   Exclude:
