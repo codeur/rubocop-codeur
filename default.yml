@@ -202,7 +202,7 @@ Metrics/PerceivedComplexity:
   Enabled: true
   Max: 10
 
-Minitest/EmptyLineBeforeAssertionMethods
+Minitest/EmptyLineBeforeAssertionMethods:
   Enabled: false
 
 Minitest/MultipleAssertions:
