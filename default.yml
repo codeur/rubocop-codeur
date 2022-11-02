@@ -202,12 +202,15 @@ Metrics/PerceivedComplexity:
   Enabled: true
   Max: 10
 
-Minitest/TestMethodName:
+Minitest/EmptyLineBeforeAssertionMethods
   Enabled: false
 
 Minitest/MultipleAssertions:
   Enabled: true
   Max: 30
+
+Minitest/TestMethodName:
+  Enabled: false
 
 # Disabled because it doesn't with symbols like: record_001
 Naming/VariableNumber:

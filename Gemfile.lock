@@ -1,9 +1,9 @@
 PATH
   remote: .
   specs:
-    rubocop-codeur (0.5.0)
+    rubocop-codeur (0.6.0)
       rubocop (~> 1.25)
-      rubocop-minitest (~> 0.10, >= 0.10.2)
+      rubocop-minitest (~> 0.20)
       rubocop-performance (~> 1.9, >= 1.9.2)
       rubocop-rails (~> 2.9, >= 2.9.1)
 
@@ -30,24 +30,24 @@ GEM
     rake (13.0.6)
     regexp_parser (2.6.0)
     rexml (3.2.5)
-    rubocop (1.36.0)
+    rubocop (1.38.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.2.1)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.20.1, < 2.0)
+      rubocop-ast (>= 1.23.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.21.0)
+    rubocop-ast (1.23.0)
       parser (>= 3.1.1.0)
-    rubocop-minitest (0.22.2)
+    rubocop-minitest (0.23.0)
       rubocop (>= 0.90, < 2.0)
     rubocop-performance (1.15.0)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.16.1)
+    rubocop-rails (2.17.2)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
@@ -69,7 +69,6 @@ DEPENDENCIES
   minitest (~> 5.16)
   rake (~> 13.0)
   rubocop-codeur!
-  rubocop-minitest (~> 0.20)
   simplecov
 
 BUNDLED WITH
