@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-codeur (0.6.1)
+    rubocop-codeur (0.7.0)
       rubocop (~> 1.25)
       rubocop-minitest (~> 0.20)
       rubocop-performance (~> 1.9, >= 1.9.2)
@@ -20,39 +20,39 @@ GEM
     docile (1.4.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    json (2.6.2)
-    minitest (5.16.3)
+    json (2.6.3)
+    minitest (5.17.0)
     parallel (1.22.1)
-    parser (3.1.2.1)
+    parser (3.2.0.0)
       ast (~> 2.4.1)
-    rack (3.0.0)
+    rack (3.0.3)
     rainbow (3.1.1)
     rake (13.0.6)
-    regexp_parser (2.6.0)
+    regexp_parser (2.6.1)
     rexml (3.2.5)
-    rubocop (1.38.0)
+    rubocop (1.42.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.2.1)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.23.0, < 2.0)
+      rubocop-ast (>= 1.24.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.23.0)
+    rubocop-ast (1.24.1)
       parser (>= 3.1.1.0)
-    rubocop-minitest (0.23.0)
+    rubocop-minitest (0.25.1)
       rubocop (>= 0.90, < 2.0)
-    rubocop-performance (1.15.0)
+    rubocop-performance (1.15.2)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.17.2)
+    rubocop-rails (2.17.4)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.11.0)
-    simplecov (0.21.2)
+    simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
@@ -60,7 +60,7 @@ GEM
     simplecov_json_formatter (0.1.4)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
-    unicode-display_width (2.3.0)
+    unicode-display_width (2.4.2)
 
 PLATFORMS
   ruby
@@ -72,4 +72,4 @@ DEPENDENCIES
   simplecov
 
 BUNDLED WITH
-   2.1.4
+   2.3.26
