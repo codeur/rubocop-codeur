@@ -292,6 +292,7 @@ Style/HashEachMethods:
 Style/HashSyntax:
   Enabled: true
   EnforcedStyle: ruby19
+  EnforcedShorthandSyntax: never
 
 Style/HashTransformKeys:
   Enabled: true
