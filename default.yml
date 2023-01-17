@@ -44,11 +44,9 @@ Layout/ClassStructure:
   Enabled: true
   AutoCorrect: false
   ExpectedOrder:
-    - devise
     - module_inclusion
     - constants
     - attributes
-    - has_ancestry
     - delegated_type
     - belongs_to
     - has_many
@@ -75,51 +73,80 @@ Layout/ClassStructure:
       - include
       - prepend
       - extend
+      - devise
     attachments:
       - has_one_attached
       - has_many_attached
       - has_attached_file
+      - has_one_variable_attached
+      - clearable_attachments
     attributes:
       - attr_accessor
       - attr_reader
       - attr_writer
       - attr_readonly
       - emojify
+      - unemojify
       - enum
+      - humanize_enums
+      - enumerize
       - monetize
       - serialize
       - has_secure_token
       - alias_attribute
+      - friendly_id
+      - slugs
       - slug
+      - translate
+      - obfuscate
+      - store
+      - store_accessor
     class_macros:
+      - has_ancestry
       - acts_as_voter
-      - pg_search_scope
+      - acts_as_list
+      - acts_as_tree
       - counter_culture
       - accepts_nested_attributes_for
       - paginates_per
       - ransack_alias
       - ransacker
       - ratyrate_rater
+      - pg_search_scope
+      - search_scope
+      - sortable
+      - tracked
     callbacks:
+      - after_initialize
       - before_validation
+      - around_validation
       - after_validation
       - before_save
       - around_save
+      - after_save
       - before_create
       - around_create
+      - after_create
       - before_update
       - around_update
+      - after_update
       - before_destroy
       - around_destroy
       - after_destroy
-      - after_create
-      - after_save
       - after_commit
+      - after_update_commit
+      - after_create_commit
+      - after_save_commit
       - after_rollback
+      - after_discard
     validations:
       - validates_associated
       - validates
       - validate
+      - validates_each
+      - validates_attachment_format
+      - validates_file
+      - validates_image
 
 Layout/FirstArrayElementIndentation:
   Enabled: true
