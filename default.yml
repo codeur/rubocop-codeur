@@ -88,6 +88,8 @@ Layout/ClassStructure:
       - attr_readonly
       - emojify
       - unemojify
+      - decode_ascii_emojis_from
+      - remove_emojis_from
       - enum
       - humanize_enums
       - enumerize
