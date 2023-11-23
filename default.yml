@@ -242,6 +242,12 @@ Minitest/MultipleAssertions:
 Minitest/TestMethodName:
   Enabled: false
 
+Minitest/AssertPredicate:
+  Enabled: false
+
+Minitest/AssertOperator:
+  Enabled: false
+
 # Disabled because it doesn't with symbols like: record_001
 Naming/VariableNumber:
   Enabled: false
@@ -357,3 +363,6 @@ Style/FormatStringToken:
   Exclude:
     - 'config/routes.rb'
     - 'config/routes/*'
+
+Style/FrozenStringLiteralComment:
+  SafeAutoCorrect: true
