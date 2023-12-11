@@ -32,6 +32,12 @@ Codeur/RailsAppPatterns:
 Codeur/RailsAvoidInstanceMethodsInHelpers:
   Enabled: false
 
+Gemspec/RequireMFA:
+  Enabled: false
+
+Gemspec/RequireRubyVersion:
+  Enabled: false
+
 Layout/AccessModifierIndentation:
   Enabled: true
   EnforcedStyle: outdent
