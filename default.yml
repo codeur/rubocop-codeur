@@ -35,7 +35,7 @@ Codeur/RailsAvoidInstanceMethodsInHelpers:
 Gemspec/RequireMFA:
   Enabled: false
 
-Gemspec/RequireRubyVersion:
+Gemspec/RequiredRubyVersion:
   Enabled: false
 
 Layout/AccessModifierIndentation:
