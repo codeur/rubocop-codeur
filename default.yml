@@ -277,6 +277,9 @@ Rails/FilePath:
 Rails/I18nLocaleTexts:
   Enabled: false
 
+Rails/ReflectionClassName:
+  Enabled: false
+
 Rails/ReversibleMigration:
   Enabled: true
   Exclude:
