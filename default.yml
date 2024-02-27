@@ -308,6 +308,7 @@ Rails/UnknownEnv:
     - test
     - staging
     - production
+    - local
 
 Style/AsciiComments:
   Enabled: false
