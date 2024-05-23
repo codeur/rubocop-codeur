@@ -277,6 +277,11 @@ Rails/FilePath:
 Rails/I18nLocaleTexts:
   Enabled: false
 
+Rails/NotNullColumn:
+  Enabled: true
+  Exclude:
+    - 'db/migrate/201*.rb'
+
 Rails/ReflectionClassName:
   Enabled: false
 
