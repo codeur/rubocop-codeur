@@ -285,9 +285,6 @@ Rails/ReversibleMigration:
   Exclude:
     - 'db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb'
 
-Rails/MigrationClassName:
-  Enabled: false
-
 Rails/SaveBang:
   Enabled: false
 
@@ -296,6 +293,11 @@ Rails/SkipsModelValidations:
   Exclude:
     - 'lib/tasks/**/*'
     - 'db/migrate/*.rb'
+
+Rails/ThreeStateBooleanColumn:
+  Enabled: true
+  Exclude:
+    - 'db/migrate/201*.rb'
 
 Rails/TimeZone:
   Enabled: true
