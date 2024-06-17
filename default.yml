@@ -8,12 +8,14 @@ require:
 AllCops:
   Exclude:
     - 'db/schema.rb'
+    - 'db/*_schema.rb'
     - 'node_modules/**/*'
     - 'public/**/*'
     - 'tmp/**/*'
     - 'vendor/**/*'
     - 'bin/*'
     - 'test/dummy/db/schema.rb'
+    - 'test/dummy/db/*_schema.rb'
     - 'test/dummy/tmp/**/*'
   TargetRubyVersion: 3.1
   TargetRailsVersion: 7
