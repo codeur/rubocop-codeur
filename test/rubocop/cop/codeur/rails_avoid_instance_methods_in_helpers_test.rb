@@ -5,7 +5,7 @@ require 'test_helper'
 module RuboCop
   module Cop
     module Codeur
-      class RailsAvoidInstanceMethodsInHelpersTest < ::RuboCop::Cop::Minitest
+      class RailsAvoidInstanceMethodsInHelpersTest < ::Minitest::Test
         def test_register_an_offense_when_using_instance_method
           assert_offense(<<~RUBY)
             module FooHelper

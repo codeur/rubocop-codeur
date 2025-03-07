@@ -1,5 +1,7 @@
 require:
   - rubocop-capybara
+
+plugins:
   - rubocop-codeur
   - rubocop-minitest
   - rubocop-performance
@@ -7,16 +9,16 @@ require:
 
 AllCops:
   Exclude:
-    - 'db/schema.rb'
-    - 'db/*_schema.rb'
-    - 'node_modules/**/*'
-    - 'public/**/*'
-    - 'tmp/**/*'
-    - 'vendor/**/*'
-    - 'bin/*'
-    - 'test/dummy/db/schema.rb'
-    - 'test/dummy/db/*_schema.rb'
-    - 'test/dummy/tmp/**/*'
+    - "db/schema.rb"
+    - "db/*_schema.rb"
+    - "node_modules/**/*"
+    - "public/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+    - "bin/*"
+    - "test/dummy/db/schema.rb"
+    - "test/dummy/db/*_schema.rb"
+    - "test/dummy/tmp/**/*"
   TargetRubyVersion: 3.1
   TargetRailsVersion: 7
   NewCops: enable
@@ -177,7 +179,7 @@ Layout/LineLength:
   Max: 200
   AutoCorrect: false
   Exclude:
-    - 'db/migrate/*'
+    - "db/migrate/*"
 
 Layout/MultilineMethodCallIndentation:
   Enabled: true
@@ -191,7 +193,7 @@ Layout/ParameterAlignment:
 Lint/DuplicateMethods:
   Enabled: true
   Exclude:
-    - 'db/migrate/*'
+    - "db/migrate/*"
 
 Lint/MissingSuper:
   Enabled: false
@@ -206,21 +208,21 @@ Metrics/AbcSize:
   Enabled: true
   Max: 65
   Exclude:
-    - 'db/migrate/*'
+    - "db/migrate/*"
 
 Metrics/BlockLength:
   Enabled: true
   Max: 60
   Exclude:
-    - 'config/routes.rb'
-    - 'lib/tasks/**/*'
-    - 'app/states/*'
+    - "config/routes.rb"
+    - "lib/tasks/**/*"
+    - "app/states/*"
 
 Metrics/ClassLength:
   Enabled: true
   Max: 300
   Exclude:
-    - 'app/models/**/*'
+    - "app/models/**/*"
 
 Metrics/CyclomaticComplexity:
   Enabled: true
@@ -230,7 +232,7 @@ Metrics/MethodLength:
   Enabled: true
   Max: 60
   Exclude:
-    - 'db/migrate/*'
+    - "db/migrate/*"
 
 Metrics/ModuleLength:
   Enabled: true
@@ -266,7 +268,7 @@ Rails/BulkChangeTable:
 Rails/CreateTableWithTimestamps:
   Enabled: true
   Exclude:
-    - 'db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb'
+    - "db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb"
 
 Rails/EnvironmentVariableAccess:
   Enabled: true
@@ -282,7 +284,7 @@ Rails/I18nLocaleTexts:
 Rails/NotNullColumn:
   Enabled: true
   Exclude:
-    - 'db/migrate/201*.rb'
+    - "db/migrate/201*.rb"
 
 Rails/ReflectionClassName:
   Enabled: false
@@ -290,7 +292,7 @@ Rails/ReflectionClassName:
 Rails/ReversibleMigration:
   Enabled: true
   Exclude:
-    - 'db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb'
+    - "db/migrate/{2012,2013,2014,2015,2016,2017,2018}*.rb"
 
 Rails/SaveBang:
   Enabled: false
@@ -298,13 +300,13 @@ Rails/SaveBang:
 Rails/SkipsModelValidations:
   Enabled: false
   Exclude:
-    - 'lib/tasks/**/*'
-    - 'db/migrate/*.rb'
+    - "lib/tasks/**/*"
+    - "db/migrate/*.rb"
 
 Rails/ThreeStateBooleanColumn:
   Enabled: true
   Exclude:
-    - 'db/migrate/201*.rb'
+    - "db/migrate/201*.rb"
 
 Rails/TimeZone:
   Enabled: true
@@ -380,8 +382,8 @@ Style/SymbolArray:
 Style/FormatStringToken:
   Enabled: true
   Exclude:
-    - 'config/routes.rb'
-    - 'config/routes/*'
+    - "config/routes.rb"
+    - "config/routes/*"
 
 Style/FrozenStringLiteralComment:
   SafeAutoCorrect: true

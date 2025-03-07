@@ -44,10 +44,10 @@ module RuboCop
           return if pattern.nil?
 
           if pattern_forbidden?(pattern)
-            msg = format(MSG_FORBIDDEN, pattern: pattern)
+            msg = format(MSG_FORBIDDEN, pattern:)
           elsif pattern_not_allowed?(pattern)
             msg = format(MSG_NOT_ALLOWED,
-                         pattern: pattern,
+                         pattern:,
                          allowed_patterns: allowed_patterns.map { |p| "`#{p}`" }.join(', '))
           end
 
