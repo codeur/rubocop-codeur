@@ -112,6 +112,7 @@ Layout/ClassStructure:
       - obfuscate
       - store
       - store_accessor
+      - normalizes
     class_macros:
       - has_ancestry
       - acts_as_voter
