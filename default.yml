@@ -35,6 +35,10 @@ Codeur/RailsAppPatterns:
 Codeur/RailsAvoidInstanceMethodsInHelpers:
   Enabled: false
 
+FactoryBot/ExcessiveCreateList:
+  Enabled: true
+  MaxAmount: 25
+
 Gemspec/RequireMFA:
   Enabled: false
 
