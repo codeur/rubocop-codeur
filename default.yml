@@ -39,6 +39,9 @@ FactoryBot/ExcessiveCreateList:
   Enabled: true
   MaxAmount: 25
 
+FactoryBot/FactoryAssociationWithStrategy:
+  Enabled: false
+
 Gemspec/RequireMFA:
   Enabled: false
 
