@@ -335,6 +335,9 @@ Style/ClassAndModuleChildren:
   Enabled: true
   AutoCorrect: true
 
+Style/CollectionQuerying:
+  Enabled: false
+
 Style/ConditionalAssignment:
   Enabled: false
 
