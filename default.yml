@@ -348,6 +348,17 @@ Style/EmptyMethod:
   Enabled: true
   EnforcedStyle: expanded
 
+Style/FormatStringToken:
+  Enabled: true
+  Exclude:
+    - "config/routes.rb"
+    - "config/routes/*"
+
+# No more needed with Ruby 3.4+, frozen string literals are default
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: never
+
 Style/GuardClause:
   Enabled: true
   MinBodyLength: 3
@@ -388,12 +399,3 @@ Style/StringLiterals:
 Style/SymbolArray:
   Enabled: true
   MinSize: 7
-
-Style/FormatStringToken:
-  Enabled: true
-  Exclude:
-    - "config/routes.rb"
-    - "config/routes/*"
-
-Style/FrozenStringLiteralComment:
-  SafeAutoCorrect: true
