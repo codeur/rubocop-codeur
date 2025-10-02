@@ -354,10 +354,8 @@ Style/FormatStringToken:
     - "config/routes.rb"
     - "config/routes/*"
 
-# No more needed with Ruby 3.4+, frozen string literals are default
 Style/FrozenStringLiteralComment:
-  Enabled: true
-  EnforcedStyle: never
+  SafeAutoCorrect: true
 
 Style/GuardClause:
   Enabled: true
