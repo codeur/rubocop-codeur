@@ -269,6 +269,9 @@ Minitest/AssertOperator:
 Naming/VariableNumber:
   Enabled: false
 
+Naming/PredicateMethod:
+  Enabled: false
+
 Rails/BulkChangeTable:
   Enabled: false
 
