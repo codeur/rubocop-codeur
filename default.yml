@@ -272,6 +272,9 @@ Naming/VariableNumber:
 Naming/PredicateMethod:
   Enabled: false
 
+Naming/PredicatePrefix:
+  Enabled: false
+
 Rails/BulkChangeTable:
   Enabled: false
 
