@@ -245,6 +245,12 @@ Metrics/ModuleLength:
   Enabled: true
   Max: 300
 
+Metrics/ParameterLists:
+  Enabled: true
+  Max: 2
+  CountKeywordArgs: false
+  MaxOptionalParameters: 3
+
 Metrics/PerceivedComplexity:
   Enabled: true
   Max: 10
