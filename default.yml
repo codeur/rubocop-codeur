@@ -247,7 +247,7 @@ Metrics/ModuleLength:
 
 Metrics/ParameterLists:
   Enabled: true
-  Max: 2
+  Max: 5
   CountKeywordArgs: false
   MaxOptionalParameters: 3
 
