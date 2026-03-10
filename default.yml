@@ -57,6 +57,9 @@ Layout/ArgumentAlignment:
   Enabled: true
   EnforcedStyle: with_first_argument
 
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+
 Layout/ClassStructure:
   Enabled: true
   AutoCorrect: false
