@@ -188,6 +188,8 @@ Layout/LineLength:
   Enabled: true
   Max: 200
   AutoCorrect: false
+  AllowedPatterns:
+    - '^#  (index|idx)_.*$' # allow long lines in index definitions
   Exclude:
     - "db/migrate/*"
 
