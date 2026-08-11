@@ -235,6 +235,7 @@ Metrics/ClassLength:
   Max: 300
   Exclude:
     - "app/models/**/*"
+    - "test/**/*"
 
 Metrics/CyclomaticComplexity:
   Enabled: true
