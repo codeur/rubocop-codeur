@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'Shared rubocop config gem for every Ruby projects at Codeur SARL'
   spec.homepage      = 'https://github.com/codeur/rubocop-codeur'
   spec.license       = 'MIT'
-  spec.required_ruby_version = '>= 3.1'
+  spec.required_ruby_version = '>= 3.4'
 
   spec.metadata['default_lint_roller_plugin'] = 'RuboCop::Codeur::Plugin'
 
@@ -25,10 +25,10 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency 'lint_roller', '~> 1.1'
-  spec.add_dependency 'rubocop', '>= 1.72.0', '< 2.0'
-  spec.add_dependency 'rubocop-capybara', '~> 2.21'
-  spec.add_dependency 'rubocop-factory_bot', '~> 2.26'
-  spec.add_dependency 'rubocop-minitest', '~> 0.37'
-  spec.add_dependency 'rubocop-performance', '~> 1.24'
-  spec.add_dependency 'rubocop-rails', '~> 2.30'
+  spec.add_dependency 'rubocop', '>= 1.90', '< 2.0'
+  spec.add_dependency 'rubocop-capybara', '~> 3.0'
+  spec.add_dependency 'rubocop-factory_bot', '~> 2.28'
+  spec.add_dependency 'rubocop-minitest', '~> 0.40'
+  spec.add_dependency 'rubocop-performance', '~> 1.27'
+  spec.add_dependency 'rubocop-rails', '~> 2.37'
 end

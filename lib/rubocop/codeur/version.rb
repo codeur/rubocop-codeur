@@ -2,6 +2,6 @@
 
 module RuboCop
   module Codeur
-    VERSION = '0.11.15'
+    VERSION = '1.0.0'
   end
 end
