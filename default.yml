@@ -328,6 +328,11 @@ Rails/SkipsModelValidations:
     - "lib/tasks/**/*"
     - "db/migrate/*.rb"
 
+# params.expect hides mass-assignment of dangerous keys from Brakeman
+# (PermitAttributes only inspects .permit): keep require/permit.
+Rails/StrongParametersExpect:
+  Enabled: false
+
 Rails/ThreeStateBooleanColumn:
   Enabled: true
   Exclude:
